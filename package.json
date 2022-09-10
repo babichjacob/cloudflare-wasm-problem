@@ -1,5 +1,12 @@
 {
   "name": "cloudflare-wasm-problem",
   "private": true,
-  "version": "1.0.0"
+  "version": "0.0.1",
+  "scripts": {
+    "build-wasm": "wasm-pack build --target web",
+    "dev": "wrangler dev --local"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.29"
+  }
 }

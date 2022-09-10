@@ -1,5 +1,5 @@
 [package]
-name = "utils-in-rust"
+name = "cloudflare-wasm-problem"
 version = "0.1.0"
 edition = "2021"
 publish = false

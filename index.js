@@ -1,4 +1,4 @@
-import { hello } from "utils-in-rust";
+import { hello } from "./pkg";
 
 export default {
   async fetch(request) {

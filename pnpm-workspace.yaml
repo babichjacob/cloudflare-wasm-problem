@@ -1,4 +1,0 @@
-packages:
-  - "cloudflare-workers"
-  - "utils-in-rust"
-  - "utils-in-rust/pkg"
