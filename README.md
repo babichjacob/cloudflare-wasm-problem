@@ -1,4 +1,20 @@
-Reproduction steps:
+# Solved!
+I figured it out thanks to [`wg/cf-worker-wasm`](https://github.com/wg/cf-worker-wasm)! You have to import the `.wasm` file too when building for web and use it to initialize before using the functions:
+```js
+import wasm from "./pkg/cloudflare_wasm_problem_bg.wasm";
+import init, { hello } from "./pkg";
+
+const instance = init(module);
+
+export default {
+  async fetch(request) {
+    await instance;
+    return new Response(hello());
+  },
+};
+```
+
+# (Not needed) Reproduction steps:
 
 1. Have Node.js + npm, `cargo`, and `wasm-pack` installed
 2. Run `npm install` to install Wrangler
